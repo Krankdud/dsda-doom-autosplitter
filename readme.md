@@ -3,7 +3,7 @@
 A [dsda-doom 0.24.3](https://github.com/kraflab/dsda-doom) autosplitter for [LiveSplit](http://livesplit.org/).
 
 ## Usage
-1. Download dsda-doom.asl
+1. Download [dsda-doom.asl](https://raw.githubusercontent.com/Krankdud/dsda-doom-autosplitter/main/dsda-doom.asl)
 2. Add the *Scriptable Auto Splitter* component to your layout
 3. Set the script path for the auto splitter component to where dsda-doom.asl is located
 4. Set LiveSplit to compare against game time
