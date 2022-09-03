@@ -46,3 +46,7 @@ gameTime {
     }
     return TimeSpan.FromSeconds(vars.totalGameTime + current.gametic / 35);
 }
+
+isLoading {
+    return true;
+}
