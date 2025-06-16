@@ -1,3 +1,17 @@
+state("dsda-doom", "0.29.0") {
+    int gametic: 0x97EF70;
+    int gamestate: 0x732590;
+    int map: 0x72F7B4;
+    int attempt: 0x8182EC;
+}
+
+state("dsda-doom", "0.28.3") {
+    int gametic: 0x96ca90;
+    int gamestate: 0x71fef0;
+    int map: 0x71d114;
+    int attempt: 0x810ad0;
+}
+
 state("dsda-doom", "0.25.6") {
     int gametic: 0x2ce1d0;
     int gamestate: 0x14a920;
