@@ -1,6 +1,6 @@
 # dsda-doom autosplitter
 
-A [dsda-doom 0.24.3](https://github.com/kraflab/dsda-doom) autosplitter for [LiveSplit](http://livesplit.org/).
+A [dsda-doom](https://github.com/kraflab/dsda-doom) autosplitter for [LiveSplit](http://livesplit.org/).
 
 ## Usage
 1. Download [dsda-doom.asl](https://raw.githubusercontent.com/Krankdud/dsda-doom-autosplitter/main/dsda-doom.asl)
@@ -13,8 +13,8 @@ so it matches movie runs.
 
 ## Updating the autosplitter
 
-The autosplitter uses four memory addresses: game tic, game state, current map, and current attempt.
-These likely need to be changed everytime dsda-doom is updated.
+The autosplitter uses six memory addresses: game tic, game state (intermission), current map, current attempt, menu state, and demo playback state.
+These need to be changed every time dsda-doom is updated.
 
 I use [Cheat Engine](https://cheatengine.org/) to find these addresses.
 
@@ -42,6 +42,16 @@ Attempt:
 1. Start a demo and search for a 1 as a four byte value.
 2. Hit the restart demo attempt button, and search for a 2.
 3. Repeat until you find the attempt address.
+
+Menu state:
+1. Start in a map, press Esc, and search for a 1 as a four byte value.
+2. Press Esc again, and search for a 0 as a four byte value.
+3. Repeat until you find the menu state address.
+
+Demo playback state:
+1. Launch into main menu, wait for demo lump playback, and search for a 1 as a four byte value.
+2. Start a demo recording and search for a 0 as a four byte value.
+3. Repeat until you find the demo playback address.
 
 The memory addresses go into the state block at the top of dsda-doom.asl.
 If the addresses in Cheat Engine show up as "dsda-doom"+#######, use the value after the plus in the script.

@@ -3,6 +3,8 @@ state("dsda-doom", "0.29.0") {
     int gamestate: 0x732590;
     int map: 0x72F7B4;
     int attempt: 0x8182EC;
+    int isMenuOpen: 0x9A0B4C;
+    int isDemoPlaying: 0x9A3064;
 }
 
 state("dsda-doom", "0.28.3") {
@@ -10,64 +12,86 @@ state("dsda-doom", "0.28.3") {
     int gamestate: 0x71fef0;
     int map: 0x71d114;
     int attempt: 0x810ad0;
-}
-
-state("dsda-doom", "0.25.6") {
-    int gametic: 0x2ce1d0;
-    int gamestate: 0x14a920;
-    int map: 0x20a844;
-    int attempt: 0x13f640;
-}
-
-state("dsda-doom", "0.24.3") {
-    int gametic: 0x2e7170;
-    int gamestate: 0x14db80;
-    int map: 0x21e584;
-    int attempt: 0x149664;
+    int isMenuOpen: 0x98E7DC;
+    int isDemoPlaying: 0x990BE8;
 }
 
 startup {
     vars.totalGameTime = 0;
-}
 
-init {
-    vars.justStarted = true;
+    settings.Add("rta_mode", false, "Set splitter for non-demo runs using RTA.");
 }
 
 start {
-    if (vars.justStarted) {
-        vars.justStarted = false;
-        vars.totalGameTime = 0;
+    // Start only when all pause/menu indicators are gone.
+    if (current.isMenuOpen == 0 && current.isDemoPlaying == 0 && current.gamestate == 0) {
+        vars.totalGameTime = 0f;
+        // In RTA mode, we need to add one tic every level start because DOOM
+        // doesn't start from tic 0.
+        if (settings["rta_mode"]) {
+            vars.totalGameTime += 1;
+        }
+        
         return true;
     }
-
-    return false;
 }
 
 split {
+    // Split on level intermission.
     if (current.gamestate == 1 && old.gamestate == 0) {
-        // Use an integer division since we don't care about ms
-        vars.totalGameTime += current.gametic / 35;
+        // In RTA mode, we need to add one tic every level start because DOOM
+        // doesn't start from tic 0.
+        if (settings["rta_mode"]) {
+            vars.totalGameTime += 1;
+        }
+        // In demo mode, this is where we add the current level time to the running total.
+        else {
+            // Use integer division to truncate the ms to match traditional DOOM timing.
+            vars.totalGameTime += current.gametic / 35;
+        }
+
         return true;
     }
-    return false;
 }
 
 reset {
-    if (current.attempt > old.attempt) {
-        vars.justStarted = true;
+    if (!settings["rta_mode"] && current.attempt > old.attempt) {
         return true;
     }
+
     return false;
 }
 
 gameTime {
-    if (current.gamestate != 0 && old.gamestate != 0) {
-        return TimeSpan.FromSeconds(vars.totalGameTime);
+    // In RTA mode, we keep a running total using delta time because we can no longer
+    // rely solely on the level time (for example, to account for saving/loading). 
+    if (settings["rta_mode"]) {
+        int delta = current.gametic - old.gametic;
+        if (delta < 0) {
+            delta = 0;
+        }
+
+        vars.totalGameTime += delta;
+
+        return TimeSpan.FromSeconds(vars.totalGameTime / 35f);
     }
-    return TimeSpan.FromSeconds(vars.totalGameTime + current.gametic / 35);
+    // In demo mode, we display the running total + current level time.
+    // Milliseconds are truncated to follow traditional DOOM timing.
+    else {
+        // Just return current total during intermissions.
+        // NOTE: Waits one refresh to let the split block run first. 
+        if (current.gamestate != 0 && old.gamestate != 0) {
+            return TimeSpan.FromSeconds(vars.totalGameTime);
+        }
+
+        return TimeSpan.FromSeconds(vars.totalGameTime + current.gametic / 35);
+    }
 }
 
 isLoading {
     return true;
+}
+
+onReset {
+    vars.totalGameTime = 0f;
 }
