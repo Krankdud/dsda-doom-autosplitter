@@ -19,7 +19,7 @@ state("dsda-doom", "0.28.3") {
 startup {
     vars.totalGameTime = 0;
 
-    settings.Add("rta_mode", false, "Set splitter for non-demo runs using RTA.");
+    settings.Add("rta_mode", false, "Set splitter for non-demo runs using RTA without load times.");
 }
 
 start {
