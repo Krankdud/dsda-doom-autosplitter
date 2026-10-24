@@ -1,0 +1,51 @@
+This test file was created using the D2ALL UV-Max by Looper, which can be found here:
+https://dsdarchive.com/wads/doom2?category=UV+Max&level=D2All
+
+The direct donwload link to this demo submission is here:
+https://dsdarchive.com/files/demos/doom2/101638/30uv7128.zip
+
+The demo filename is:
+30uv7128.lmp
+
+The map times and overall time are shown below: 
+
+(MM:SS)	-	Level #: Level Name
+===============================
+0:45	-	Level 1: Entryway
+1:03	-	Level 2: Underhalls
+1:15	-	Level 3: The Gantlet
+0:57	-	Level 4: The Focus
+1:55	-	Level 5: The Waste Tunnels
+2:01	-	Level 6: The Crusher
+0:56	-	Level 7: Dead Simple
+2:28	-	Level 8: Tricks and Traps
+3:15	-	Level 9: The Pit
+3:26	-	Level 10: Refueling Base
+2:13	-	Level 11: 'O' of Destruction
+2:56	-	Level 12: The Factory
+3:46	-	Level 13: Downtown
+1:45	-	Level 14: The Inmost Dens
+4:16	-	Level 15: Industrial Zone
+1:58	-	Level 31: Wolfenstein2
+0:43	-	Level 32: Grosse2
+2:15	-	Level 16: Suburbs
+3:09	-	Level 17: Tenements
+2:42	-	Level 18: The Courtyard
+3:06	-	Level 19: The Citadel
+2:47	-	Level 20: Gotcha!
+1:51	-	Level 21: Nirvana
+0:54	-	Level 22: The Catacombs
+2:05	-	Level 23: Barrels o' Fun
+4:00	-	Level 24: The Chasm
+1:30	-	Level 25: Bloodfalls
+2:37	-	Level 26: The Abandoned Mines
+3:00	-	Level 27: Monster Condo
+2:38	-	Level 28: The Spirit World
+2:46	-	Level 29: The Living End
+0:30	-	Level 30: Icon of Sin
+
+Total Time:
+===========
+01:11:28
+===========
+(HH:MM:SS)

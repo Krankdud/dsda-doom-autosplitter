@@ -1,0 +1,63 @@
+Test File Origin:
+https://dsdarchive.com/files/demos/doom/97868/ud1allm7653.zip
+Listed Here:
+https://dsdarchive.com/wads/doom?level=D1All
+
+============
+Run Details:
+============
+Player: kuckkuck
+IWAD: doom.wad
+Map: D1All
+Category: UV-Max
+Skill: 4
+Sourceport: dsda-doom-0.28.3 (-complevel 3)
+Youtube video: https://youtu.be/obBtjGLFrkE
+
+Time: 1:16:53
+-------------------------------------
+Level - Level Name        |  Time   | 
+Episode 1: Knee-Deep in the Dead
+E1M1 - Hangar             | 0:32.23 | 
+E1M2 - Nuclear Plant      | 1:39.37 |  
+E1M3 - Toxin Refinery     | 2:43.14 | 
+E1M9 - Military Base      | 1:48.57 |
+E1M4 - Command Control    | 1:38.60 | 
+E1M5 - Phobos Lab         | 2:46.43 | 
+E1M6 - Central Processing | 2:55.43 | 
+E1M7 - Computer Station   | 2:36.97 | 
+E1M8 - Phobos Anomaly     | 1:06.77 | 
+
+Episode 2: The Shores of Hell
+E2M1 - Deimos Anomaly      | 1:24.69 | 
+E2M2 - Containment Area    | 3:32.29 | 
+E2M3 - Refinery            | 2:05.40 | 
+E2M4 - Deimos Lab          | 3:33.06 |
+E2M5 - Command Center      | 4:01.51 |
+E2M9 - Fortress of Mystery | 0:51.29 |  
+E2M6 - Halls of the Damned | 4:07.66 | 
+E2M7 - Spawning Vats       | 3:36.20 |
+E2M8 - Tower of Babel      | 0:28.17 | 
+
+Episode 3: Inferno
+E3M1 - Hell Keep         | 1:11.69 | 
+E3M2 - Slough of Despair | 2:04.37 |  
+E3M3 - Pandemonium       | 2:30.74 |
+E3M4 - House of Pain     | 3:24.20 | 
+E3M5 - Unholy Cathedral  | 2:56.91 | 
+E3M6 - Mt. Erebus        | 2:08.97 |
+E3M9 - Warrens           | 1:52.06 |  
+E3M7 - Limbo             | 1:37.57 | 
+E3M8 - Dis               | 0:19.20 | 
+
+Episode 4: Thy Flesh Consumed
+E4M1 - Hell Beneath          | 2:03.71 |
+E4M2 - Perfect Hatred        | 1:43.51 |
+E4M9 - Fear                  | 2:00.09 |
+E4M3 - Sever the Wicked      | 2:32.40 | 
+E4M4 - Unruly Evil           | 1:10.43 |
+E4M5 - They Will Repent      | 1:41.00 | 
+E4M6 - Against Thee Wickedly | 2:27.40 |
+E4M7 - And Hell Followed     | 1:57.54 | 
+E4M8 - Unto the Cruel        | 1:59.03 |
+----------------------------------------
